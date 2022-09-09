@@ -1,0 +1,1 @@
+var xmpcfg = {access: { accessToken: '669186cd-1ce4-4cc3-b742-7e5746b1ce8b_247c1a06-b4c1-4f16-bf03-664dfd5d2ef6_6210b8f01b884eee8ae146c108a47787', url: 'https://cc-uat.campaignconnect.com.au/XMPieXMPL_REST_API', circleProjectID:'247c1a06-b4c1-4f16-bf03-664dfd5d2ef6', circleProjectName: 'ASP—Circle and Supabase' }};
