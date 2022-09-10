@@ -1,18 +1,9 @@
-import { useState, useContext } from "react";
-import { createClient } from "@supabase/supabase-js";
+import { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { UserContext, LoadContext } from "./_app";
-
-const SUPABASE_URL = "https://ipvwqlwbmyiusmfrqllp.supabase.co";
-const supabase = createClient(
-  SUPABASE_URL,
-  process.env.NEXT_PUBLIC_SUPABASEANON
-);
+import { supabase } from "../lib/initSupabase";
 
 export default function Login() {
-  const { userInfo, sessionInfo } = useContext(UserContext);
-  const { loadState, setLoadState } = useContext(LoadContext);
   const [username, setUsername] = useState(null);
   const [password, setPassword] = useState(null);
   const router = useRouter();
@@ -23,7 +14,7 @@ export default function Login() {
   function handlePasswdInput(e) {
     setPassword(e.target.value);
   }
-  //REGISTERATION START
+  //LOGIN START
   async function handleLogin(e) {
     e.preventDefault();
     const { user, session, error } = await supabase.auth.signIn({
@@ -31,16 +22,13 @@ export default function Login() {
       password: `${password}`,
     });
     if (session) {
-      console.log(user);
-      console.log(session);
-      setLoadState("ON");
       router.push("/");
     }
     if (error) {
       console.log(error);
     }
   }
-  //REGISTERATION END
+  //LOGIN END
 
   return (
     <div>
