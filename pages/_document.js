@@ -16,7 +16,6 @@ class MyDocument extends Document {
             src="https://kit.fontawesome.com/6d2da56e6f.js"
             crossOrigin="anonymous"
           ></script>
-          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         </Head>
         <body>
           <Main />

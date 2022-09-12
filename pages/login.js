@@ -54,7 +54,7 @@ export default function Login() {
                   onClick={handleLogin}
                 />
                 <p>
-                  Don't have an account?{" "}
+                  Don&apos;t have an account?{" "}
                   <Link href="/register">
                     <a>Sing up now</a>
                   </Link>
