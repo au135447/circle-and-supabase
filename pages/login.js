@@ -22,7 +22,6 @@ export default function Login() {
       password: `${password}`,
     });
     if (session) {
-      console.log(user);
       router.push("/");
     }
     if (error) {
